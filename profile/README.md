@@ -20,7 +20,8 @@ Repoları düzenli bir şekilde görmek için [buraya tıkla.](#düzenlenmiş-re
 
 Bu organizasyon, Akdeniz Üniversitesi Bilgisayar Mühendisliği öğrencileri tarafından kurulmuştur ve yönetilmektedir. Amacı, öğrenci topluluğuna fayda sağlamak ve bilgi paylaşımını kolaylaştırmaktır.
 
-Katkıda Bulunanlar: 
+Katkıda Bulunanlar:
+
 **Yahya Efe Kuruçay** - [Website](https://efekurucay.com/) - [GitHub](https://github.com/efekurucay) - [LinkedIn](https://linkedin.com/in/efekurucay24)
 
 **Burak Efe Ekin** - [GitHub](https://github.com/LogStormKing) - [LinkedIn](https://www.linkedin.com/in/burak-efe-ekin-974508331/)
