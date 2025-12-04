@@ -1,12 +1,44 @@
-# Akdeniz Üniversitesi Bilgisayar Mühendisliği Kaynak Merkezi 👋
+# Akdeniz CSE/AIE Students👋
 
-Merhaba! Bu `Akdeniz-CSE-Students` GitHub organizasyonu, Akdeniz Üniversitesi Bilgisayar Mühendisliği bölümü öğrencileri için ders notları, örnek sınavlar, laboratuvar çalışmaları, projeler ve diğer faydalı akademik kaynakları bir araya getiren merkezi bir platformdur.
+Merhaba! Bu `Akdeniz-CSE-Students` GitHub organizasyonu, Akdeniz Üniversitesi Bilgisayar Mühendisliği bölümü öğrencileri için ders notları, örnek sınavlar, laboratuvar çalışmaları, projeler ve diğer faydalı akademik kaynakları bir araya getiren merkezi bir platformdur. Amacımız, öğrencilerin ders materyallerine kolayca erişmesini sağlamak ve birbirimizin akademik gelişimine katkıda bulunmaktır.
 
-Amacımız, öğrencilerin ders materyallerine kolayca erişmesini sağlamak ve birbirimizin akademik gelişimine katkıda bulunmaktır.
+## 📑 İçindekiler
+- [Akdeniz CSE/AIE Students👋](#akdeniz-cseaie-students)
+- [👤 Organizasyon Hakkında](#-organizasyon-hakkında)
+- [🤝 Katkıda Bulunma](#-katkıda-bulunma)
+- [📚 Düzenlenmiş Repo Linkleri](#-düzenlenmiş-repo-linkleri)
+  - [1. Sınıf Dersleri](#1-sınıf-dersleri)
+  - [2. Sınıf Dersleri](#2-sınıf-dersleri)
+  - [3. Sınıf Dersleri](#3-sınıf-dersleri)
+  - [4. Sınıf Dersleri](#4-sınıf-dersleri)
+- [Documentation](https://akdeniz.gitbook.io/)
+---
+
+Repoları düzenli bir şekilde görmek için [buraya tıkla.](#düzenlenmiş-repo-linkleri) 
+
+## 👤 Organizasyon Hakkında
+
+Bu organizasyon, Akdeniz Üniversitesi Bilgisayar Mühendisliği öğrencileri tarafından kurulmuştur ve yönetilmektedir. Amacı, öğrenci topluluğuna fayda sağlamak ve bilgi paylaşımını kolaylaştırmaktır.
+
+Katkıda Bulunanlar: 
+**Yahya Efe Kuruçay** - [Website](https://efekurucay.com/) - [GitHub](https://github.com/efekurucay) - [LinkedIn](https://linkedin.com/in/efekurucay24)
+
+**Burak Efe Ekin** - [GitHub](https://github.com/LogStormKing) - [LinkedIn](https://www.linkedin.com/in/burak-efe-ekin-974508331/)
+
+---
+## 🤝 Katkıda Bulunma
+
+Bu kaynakları daha da zenginleştirmek için topluluğun yardımına açığız! Eğer siz de ders notlarınızı, örnek sorularınızı, projelerinizi, laboratuvar çözümlerinizi veya faydalı bulduğunuz diğer kaynakları paylaşmak isterseniz:
+
+1.  İlgili dersin deposuna gidin.
+2.  Katkınızı açıklayan bir **Issue** açın veya doğrudan bir **Pull Request** gönderin.
+3.  Eğer eklemek istediğiniz dersin deposu yoksa veya organizasyona üye olmak isterseniz, organizasyon yöneticileriyle iletişime geçebilirsiniz.
+
+Her türlü katkı değerlidir!
 
 ---
 
-## 📚 Ders Depoları
+## 📚 Düzenlenmiş Repo Linkleri
 
 Aşağıda, bölüm derslerine ait kaynakları içeren GitHub depolarını yıllara göre düzenlenmiş olarak bulabilirsiniz. Zamanla yeni dersler ve kaynaklar eklenmeye devam edecektir.
 
@@ -37,26 +69,3 @@ Aşağıda, bölüm derslerine ait kaynakları içeren GitHub depolarını yıll
 
 ---
 
-## 🤝 Katkıda Bulunma
-
-Bu kaynakları daha da zenginleştirmek için topluluğun yardımına açığız! Eğer siz de ders notlarınızı, örnek sorularınızı, projelerinizi, laboratuvar çözümlerinizi veya faydalı bulduğunuz diğer kaynakları paylaşmak isterseniz:
-
-1.  İlgili dersin deposuna gidin.
-2.  Katkınızı açıklayan bir **Issue** açın veya doğrudan bir **Pull Request** gönderin.
-3.  Eğer eklemek istediğiniz dersin deposu yoksa veya organizasyona üye olmak isterseniz, organizasyon yöneticileriyle iletişime geçebilirsiniz.
-
-Her türlü katkı değerlidir!
-
----
-
-## 👤 Kurucu Hakkında
-
-Bu organizasyon, Akdeniz Üniversitesi Bilgisayar Mühendisliği öğrencisi **Yahya Efe Kuruçay** tarafından kurulmuş ve yönetilmektedir. Amacı, öğrenci topluluğuna fayda sağlamak ve bilgi paylaşımını kolaylaştırmaktır.
-
-Daha fazla bilgi veya Yahya Efe'nin diğer çalışmalarına göz atmak için:
-* **GitHub Profili:** [yahyaefekurucay](https://github.com/efekurucay) 
-* **Kişisel Websitesi:** [websitem](https://efekurucay.com) 
-
----
-
-Umarım faydalı olur ✨ README MADE WITH AI 
