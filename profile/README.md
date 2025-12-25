@@ -24,6 +24,8 @@ Katkıda Bulunanlar:
 
 **Yahya Efe Kuruçay** - [Website](https://efekurucay.com/) - [GitHub](https://github.com/efekurucay) - [LinkedIn](https://linkedin.com/in/efekurucay24)
 
+**Burak Yalçın** - [GitHub](https://github.com/burakyalcin10) - [LinkedIn](https://www.linkedin.com/in/burakyalcin4510/)
+
 **Burak Efe Ekin** - [GitHub](https://github.com/LogStormKing) - [LinkedIn](https://www.linkedin.com/in/burak-efe-ekin-974508331/)
 
 ---
