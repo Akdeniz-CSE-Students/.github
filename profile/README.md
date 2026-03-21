@@ -15,7 +15,6 @@ Merhaba! Bu `Akdeniz-CSE-Students` GitHub organizasyonu, Akdeniz Üniversitesi B
 - [Documentation](https://akdeniz.gitbook.io/)
 ---
 
-Repoları düzenli bir şekilde görmek için [buraya tıkla.](#düzenlenmiş-repo-linkleri) 
 
 ## 👤 Organizasyon Hakkında
 
