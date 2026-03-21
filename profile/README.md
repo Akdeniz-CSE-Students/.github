@@ -1,9 +1,9 @@
-# Akdeniz CSE/AIE Students👋
+# Akdeniz CSE/AIE Students 🌐
 
 Merhaba! Bu `Akdeniz-CSE-Students` GitHub organizasyonu, Akdeniz Üniversitesi Bilgisayar Mühendisliği bölümü öğrencileri için ders notları, örnek sınavlar, laboratuvar çalışmaları, projeler ve diğer faydalı akademik kaynakları bir araya getiren merkezi bir platformdur. Amacımız, öğrencilerin ders materyallerine kolayca erişmesini sağlamak ve birbirimizin akademik gelişimine katkıda bulunmaktır.
 
 ## 📑 İçindekiler
-- [Akdeniz CSE/AIE Students👋](#akdeniz-cseaie-students)
+- [Akdeniz CSE/AIE Students 🌐](#akdeniz-cseaie-students)
 - [👤 Organizasyon Hakkında](#-organizasyon-hakkında)
 - [🤝 Katkıda Bulunma](#-katkıda-bulunma)
 - [📚 Düzenlenmiş Repo Linkleri](#-düzenlenmiş-repo-linkleri)
