@@ -1,3 +1,5 @@
+> 📬 İletişim için [efekurucay.com](https://efekurucay.com) adresini ziyaret edebilir veya `contact@efekurucay.com` adresine e-posta gönderebilirsiniz.
+
 # Akdeniz CSE/AIE Students 🌐
 
 Merhaba! Bu `Akdeniz-CSE-Students` GitHub organizasyonu, Akdeniz Üniversitesi Bilgisayar Mühendisliği bölümü öğrencileri için ders notları, örnek sınavlar, laboratuvar çalışmaları, projeler ve diğer faydalı akademik kaynakları bir araya getiren merkezi bir platformdur. Amacımız, öğrencilerin ders materyallerine kolayca erişmesini sağlamak ve birbirimizin akademik gelişimine katkıda bulunmaktır.
