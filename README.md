@@ -1,1 +1,0 @@
-# YAHYA EFE KURUÇAY
