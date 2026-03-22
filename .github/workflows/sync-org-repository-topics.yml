@@ -97,7 +97,7 @@ jobs:
               [/it-law/, ['it-law']],
               [/technical-communication/, ['technical-communication']],
               [/project-management/, ['project-management']],
-              [/graduation-project/, ['capstone-project']],
+              [/graduation-project/, ['graduation-project']],
               [/economics/, ['economics']],
               [/budget-tracking/, ['budget-tracking', 'finance']],
               [/management-system/, ['management-system']],
