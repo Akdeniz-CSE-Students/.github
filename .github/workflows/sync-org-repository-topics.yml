@@ -95,8 +95,8 @@ jobs:
                 topics.push(...exactTopics[normalized]);
               }
 
-              if (normalized.includes('python')) topics.push('python');
-              if (normalized.includes('java')) topics.push('java');
+              if (/(^|-)python($|-)/.test(normalized)) topics.push('python');
+              if (/(^|-)java($|-)/.test(normalized)) topics.push('java');
               if (normalized.includes('cpp') || normalized.includes('c-plus-plus')) topics.push('cpp');
               if (
                 normalized.includes('programming')
@@ -137,7 +137,11 @@ jobs:
                 ...currentTopics
               ])];
               if (mergedTopics.length > MAX_TOPICS) {
-                core.warning(`${repoName}: topic list exceeds ${MAX_TOPICS}, truncating from ${mergedTopics.length}.`);
+                const dropped = mergedTopics.slice(MAX_TOPICS);
+                core.warning(
+                  `${repoName}: topic list exceeds ${MAX_TOPICS}, truncating from ${mergedTopics.length}.`
+                  + ` Merge order is base -> specific -> existing; dropped topics: ${dropped.join(', ')}`
+                );
               }
               const desiredTopics = mergedTopics.slice(0, MAX_TOPICS);
 
