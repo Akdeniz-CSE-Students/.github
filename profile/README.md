@@ -1,11 +1,19 @@
 > 📬 İletişim için [efekurucay.com](https://efekurucay.com) adresini ziyaret edebilir veya `contact@efekurucay.com` adresine e-posta gönderebilirsiniz.
 
-# Akdeniz CSE/AIE Students 🌐
 
-Merhaba! Bu `Akdeniz-CSE-Students` GitHub organizasyonu, Akdeniz Üniversitesi Bilgisayar Mühendisliği bölümü öğrencileri için ders notları, örnek sınavlar, laboratuvar çalışmaları, projeler ve diğer faydalı akademik kaynakları bir araya getiren merkezi bir platformdur. Amacımız, öğrencilerin ders materyallerine kolayca erişmesini sağlamak ve birbirimizin akademik gelişimine katkıda bulunmaktır.
+# 🎓 AkdenizOS 🌐
+
+> Akdeniz Üniversitesi Bilgisayar Mühendisliği öğrencileri için açık kaynak eğitim platformu
+
+![Repos](https://img.shields.io/badge/Repositories-99+-blue)
+![Open Source](https://img.shields.io/badge/Open%20Source-Yes-green)
+![Education](https://img.shields.io/badge/Focus-Education-orange)
+![Location](https://img.shields.io/badge/Location-Turkey-red)
+
+Merhaba! Bu `AkdenizOS` GitHub organizasyonu, Akdeniz Üniversitesi Bilgisayar Mühendisliği bölümü öğrencileri için ders notları, örnek sınavlar, laboratuvar çalışmaları, projeler ve diğer faydalı akademik kaynakları bir araya getiren merkezi bir platformdur. Amacımız, öğrencilerin ders materyallerine kolayca erişmesini sağlamak ve birbirimizin akademik gelişimine katkıda bulunmaktır.
 
 ## 📑 İçindekiler
-- [Akdeniz CSE/AIE Students 🌐](#akdeniz-cseaie-students)
+- [Akdeniz CSE/AIE Students 🌐](#akdenizos)
 - [👤 Organizasyon Hakkında](#-organizasyon-hakkında)
 - [🤝 Katkıda Bulunma](#-katkıda-bulunma)
 - [📚 Düzenlenmiş Repo Linkleri](#-düzenlenmiş-repo-linkleri)
@@ -137,3 +145,14 @@ Aşağıda, bölüm derslerine ait kaynakları içeren GitHub depolarını yıll
 * [Taylor-and-maclaurin-series](https://github.com/AkdenizOS/Taylor-and-maclaurin-series)
 
 ---
+
+## ⭐ Destek Ol
+
+Projeyi beğendiysen ⭐ vererek destek olabilirsin!
+
+---
+
+## 📌 Not
+
+Bu organizasyon tamamen öğrenci odaklıdır ve sürekli gelişmektedir.  
+Katkıda bulunarak sen de büyümesine yardımcı olabilirsin 🚀
