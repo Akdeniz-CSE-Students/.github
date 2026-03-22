@@ -21,7 +21,8 @@ jobs:
           github-token: ${{ secrets.ORG_TOPICS_TOKEN || github.token }}
           script: |
             const org = 'Akdeniz-CSE-Students';
-            const dryRun = core.getInput('dry_run') === 'true';
+            const dryRun = `${context.payload.inputs?.dry_run ?? 'true'}`.toLowerCase() === 'true';
+            const MAX_TOPICS = 20;
 
             const baseTopics = [
               'akdeniz-university',
@@ -95,7 +96,10 @@ jobs:
               if (normalized.includes('python')) topics.push('python');
               if (normalized.includes('java')) topics.push('java');
               if (normalized.includes('cpp') || normalized.includes('c-plus-plus')) topics.push('cpp');
-              if (normalized.includes('programming') && !normalized.includes('web-programming')) topics.push('programming');
+              if (
+                normalized.includes('programming')
+                && !/(web|mobile)-programming|programming-languages/.test(normalized)
+              ) topics.push('programming');
 
               if (topics.length === 0) {
                 topics.push('computer-science');
@@ -129,7 +133,7 @@ jobs:
                 ...baseTopics,
                 ...specificTopics(repoName),
                 ...currentTopics
-              ])].slice(0, 20);
+              ])].slice(0, MAX_TOPICS);
 
               const currentSorted = [...currentTopics].sort();
               const desiredSorted = [...desiredTopics].sort();
