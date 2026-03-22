@@ -87,7 +87,7 @@ jobs:
               [/computer-organization/, ['computer-architecture']],
               [/digital-design/, ['digital-design']],
               [/robotics/, ['robotics']],
-              [/wireless-and-mobile-networks?/, ['wireless-networks', 'networks']],
+              [/wireless-and-mobile-networks?/, ['wireless-networks', 'mobile-networks', 'networks']],
               [/data-mining/, ['data-mining']],
               [/virtual-reality/, ['virtual-reality']],
               [/metaverse/, ['metaverse']],
