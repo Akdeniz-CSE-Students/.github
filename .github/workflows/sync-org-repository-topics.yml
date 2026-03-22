@@ -1,0 +1,176 @@
+name: Sync organization repository topics
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "If true, only logs proposed topic updates without applying"
+        required: true
+        default: true
+        type: boolean
+
+jobs:
+  sync-topics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Sync topics for all organization repositories
+        uses: actions/github-script@v7
+        with:
+          # For org-wide updates, set ORG_TOPICS_TOKEN with sufficient scopes
+          # (e.g. public_repo/repo depending on repository visibility).
+          github-token: ${{ secrets.ORG_TOPICS_TOKEN || github.token }}
+          script: |
+            const org = 'Akdeniz-CSE-Students';
+            const dryRun = `${context.payload.inputs?.dry_run ?? 'true'}`.toLowerCase() === 'true';
+            const MAX_TOPICS = 20;
+
+            const baseTopics = [
+              'akdeniz-university',
+              'computer-engineering',
+              'lecture-notes',
+              'akdeniz-cse'
+            ];
+
+            const exactTopics = {
+              'cse-201-data-structures': ['data-structures', 'algorithms'],
+              'cse-204-database-systems': ['database', 'sql'],
+              'cse-320-computer-networks': ['networks'],
+              'cse-335-web-programming': ['web-development'],
+              'cse-336-advanced-web-programming': ['web-development', 'advanced-web'],
+              'cse-438-advanced-web-programming': ['web-development', 'advanced-web'],
+              'cse-438-microservice-architecture': ['microservices', 'software-architecture'],
+              'cse-344-scripting-languages': ['scripting', 'python'],
+              'cse-433-advanced-mobile-programming': ['mobile-development', 'android'],
+              'cse-425-network-security': ['networks', 'cybersecurity'],
+              'cse-472-information-systems-security': ['cybersecurity', 'information-security'],
+              'cpuemulator-java': ['java', 'computer-architecture', 'emulator'],
+              'basic-course-management-system-python': ['python', 'course-management'],
+              'electricpotential-capacitance-calc-python-java': ['python', 'java', 'physics'],
+              'graph-theory-visualizer': ['graph-theory', 'algorithms', 'visualization'],
+              'quicksort-pivot-simulator': ['algorithms', 'sorting', 'simulation']
+            };
+
+            const patternTopics = [
+              [/data-structures/, ['data-structures']],
+              [/database/, ['database']],
+              [/web-programming/, ['web-development']],
+              [/networks?/, ['networks']],
+              [/operating/, ['operating-systems']],
+              [/algorithm|quicksort|graph-theory/, ['algorithms']],
+              [/machine-learning/, ['machine-learning']],
+              [/artificial-intelligence/, ['artificial-intelligence']],
+              [/natural-language-processing/, ['natural-language-processing']],
+              [/large-language-models?/, ['large-language-models', 'ai']],
+              [/image-processing/, ['image-processing']],
+              [/software-engineering/, ['software-engineering']],
+              [/embedded-systems?/, ['embedded-systems']],
+              [/microcontroller/, ['microcontrollers', 'embedded-systems']],
+              [/mobile-programming/, ['mobile-development']],
+              [/parallel-computing/, ['parallel-computing']],
+              [/computer-organization/, ['computer-architecture']],
+              [/digital-design/, ['digital-design']],
+              [/physics/, ['physics']],
+              [/mathematics/, ['mathematics']],
+              [/statistics/, ['statistics']],
+              [/discrete-mathematics/, ['discrete-mathematics', 'mathematics']],
+              [/linear-algebra/, ['linear-algebra', 'mathematics']],
+              [/documentation/, ['documentation']],
+              [/simulator/, ['simulation']],
+              [/programming-languages/, ['programming-languages']]
+            ];
+
+            function specificTopics(repoName) {
+              const normalized = repoName.toLowerCase().replace(/_/g, '-');
+              const topics = [];
+
+              for (const [regex, tags] of patternTopics) {
+                if (regex.test(normalized)) {
+                  topics.push(...tags);
+                }
+              }
+
+              if (exactTopics[normalized]) {
+                topics.push(...exactTopics[normalized]);
+              }
+
+              if (/(^|-)python($|-)/.test(normalized)) topics.push('python');
+              if (/(^|-)java($|-)/.test(normalized)) topics.push('java');
+              if (normalized.includes('cpp') || normalized.includes('c-plus-plus')) topics.push('cpp');
+              if (
+                normalized.includes('programming')
+                && !/(web|mobile)-programming|programming-languages/.test(normalized)
+              ) topics.push('programming');
+
+              if (topics.length === 0) {
+                topics.push('computer-science');
+              }
+
+              return [...new Set(topics)];
+            }
+
+            const repos = await github.paginate(github.rest.repos.listForOrg, {
+              org,
+              type: 'all',
+              per_page: 100
+            });
+
+            core.info(`Found ${repos.length} repositories in ${org}.`);
+
+            let changedCount = 0;
+            let unchangedCount = 0;
+
+            for (const repo of repos) {
+              const owner = repo.owner.login;
+              const repoName = repo.name;
+
+              const currentTopicsResponse = await github.rest.repos.getAllTopics({
+                owner,
+                repo: repoName
+              });
+
+              const currentTopics = currentTopicsResponse.data.names || [];
+              const mergedTopics = [...new Set([
+                ...baseTopics,
+                ...specificTopics(repoName),
+                ...currentTopics
+              ])];
+              if (mergedTopics.length > MAX_TOPICS) {
+                const dropped = mergedTopics.slice(MAX_TOPICS);
+                core.warning(
+                  `${repoName}: topic list exceeds ${MAX_TOPICS}, truncating from ${mergedTopics.length}.`
+                  + ` Merge order is base -> specific -> existing; dropped topics: ${dropped.join(', ')}`
+                );
+              }
+              const desiredTopics = mergedTopics.slice(0, MAX_TOPICS);
+
+              const currentSorted = [...currentTopics].sort();
+              const desiredSorted = [...desiredTopics].sort();
+              const isSame = JSON.stringify(currentSorted) === JSON.stringify(desiredSorted);
+
+              if (isSame) {
+                unchangedCount += 1;
+                core.info(`✓ ${repoName}: already up to date`);
+                continue;
+              }
+
+              changedCount += 1;
+
+              if (dryRun) {
+                core.info(`[DRY RUN] ${repoName}`);
+                core.info(`  current: ${currentTopics.join(', ') || '(none)'}`);
+                core.info(`  desired: ${desiredTopics.join(', ')}`);
+                continue;
+              }
+
+              await github.rest.repos.replaceAllTopics({
+                owner,
+                repo: repoName,
+                names: desiredTopics
+              });
+
+              core.info(`Updated ${repoName}: ${desiredTopics.join(', ')}`);
+            }
+
+            core.notice(`Topic sync complete. changed=${changedCount}, unchanged=${unchangedCount}, dry_run=${dryRun}`);
