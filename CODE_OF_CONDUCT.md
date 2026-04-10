@@ -2,7 +2,7 @@
 
 ## Our Student Community
 
-Akdeniz-CSE-Students is a learning-focused community for **Akdeniz University Computer Engineering students** and contributors. We want this space to be welcoming, inclusive, and respectful for everyone.
+AkdenizOS is a learning-focused community for **Akdeniz University Computer Engineering students** and contributors. We want this space to be welcoming, inclusive, and respectful for everyone.
 
 We value:
 
